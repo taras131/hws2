@@ -6,15 +6,29 @@ import FriendMessage from './friend-message/FriendMessage'
 import avatar from './avatar.png'
 
 /*
-* 1 - описать тип MessageType
-* 2 - описать тип MessagePropsType в файле Message.tsx
-* 3 - в файле Message.tsx отобразить приходящие данные
+* 1 - описать тип MessageType /
+* 2 - описать тип MessagePropsType в файле Message.tsx /
+* 3 - в файле Message.tsx отобразить приходящие данные /
 * 4 - выполнить пункты 2, 3 в файле FriendMessage.tsx
 * 5 - сделать стили в соответствии с дизайном
 * */
 
+export type UserType = {
+    avatar: string, // можно менять
+    name: string,  // можно менять
+}
+
+type TMessage = {
+    text: string
+    time: string
+}
+
 // нужно создать правильный тип вместо any
-export type MessageType = any
+export type MessageType = {
+    id: number,
+    user: UserType,
+    message: TMessage
+}
 
 // структуру объекта не менять
 export const message0: MessageType = {
@@ -50,7 +64,6 @@ const HW1 = () => {
                     <Message message={message0} />
                     <FriendMessage message={friendMessage0} />
                 </div>
-
                 {/*для автоматической проверки дз (не менять)*/}
                 <MessageSender M={Message} />
             </div>

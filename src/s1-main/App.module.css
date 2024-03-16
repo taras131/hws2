@@ -3,7 +3,8 @@
     margin: 0 auto;
     max-width: 1280px;
     width: 100%;
-    padding: 130px 70px;
+    padding: 0 70px 130px;
+    position: relative;
 }
 
 .hw {

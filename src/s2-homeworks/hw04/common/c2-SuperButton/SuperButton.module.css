@@ -10,6 +10,7 @@
     transition: .4s;
 }
 
+
 .disabled {
     background: #004d99;
     opacity: 0.5;
@@ -18,7 +19,7 @@
 }
 
 .secondary {
-    background-color: #fff;
+    background-color: #fff !important;
     color: #06c;
     border: 1px solid #06c;
 }
